@@ -1,5 +1,10 @@
 # anagram-challenge
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9c273f44-4472-4d99-8ce2-18f0f7d27b28/deploy-status)](https://app.netlify.com/sites/silly-mahavira-3da122/deploys)
+
+[Demo](anagrammatist.netlify.com)
+
+
 ## Project setup
 ```
 npm install

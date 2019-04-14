@@ -9,7 +9,7 @@
         </v-container>
         <v-container>
           <v-flex xs12 md6 lg6 text-sm-right>
-            <v-tooltip top>
+            <v-tooltip top data-app>
               <template v-slot:activator="{ on }">
                 <v-btn icon v-on="on">
                   <v-icon color="primary lighten-1">info</v-icon>
@@ -21,27 +21,27 @@
           </v-flex>
           <v-layout row wrap>
             <v-flex xs12 md6 lg6>
-              <v-text-field outline light label="Any word (ie.tabs)" primary v-model="word" v-on:change="anagramSearch">
+              <v-text-field outline light label="Any word (ie.tabs)" primary v-model="word" v-on:change="anagramSearch" id="text-box">
               </v-text-field>
             </v-flex>
             <v-flex xs12 md6 text-xs-right text-md-left>
-              <v-btn depressed large color="primary">Submit</v-btn>
+              <v-btn id="button" depressed large color="primary" v-on:click="anagramSearch()">Submit</v-btn>
             </v-flex>
           </v-layout>
           <v-flex md8 v-if="anagrams.length > 0">
-            <h5>Here's all the anagrams for {{anagramWord}}! </h5>
+            <h5 id="anagram-list-header">Here's all the anagrams for {{anagramWord}}! </h5>
             <v-card >
-              <ul id="list-group">
+              <ul id="list-group" >
                 <li id="list-group-item" v-for="item in anagrams" :key="item">
                   <h3> {{ item }}</h3>
                 </li>
               </ul>
             </v-card>
           </v-flex>
-          <v-flex md8 v-if="anagrams.length === 0 && anagramWord != '' && err === ''">
-            <h3>Could not find a  anagram for {{anagramWord}}! </h3>
+          <v-flex id="anagram-err-box" md8 v-if="anagrams.length === 0 && anagramWord != '' && err === ''">
+            <h3 >Could not find a anagram for {{anagramWord}}! </h3>
           </v-flex>
-             <v-flex md8 v-if="err != ''">
+          <v-flex md8 id="err" v-if="err != ''">
             <h3>{{err}}</h3>
           </v-flex>
         </v-container>
@@ -111,7 +111,7 @@ font-family: 'Fira Sans', sans-serif;
     margin-bottom: .5rem;
     font-family: inherit;
     font-weight: 500;
-    line-height: 1.8;
+    line-height: 1.3;
     color: inherit;
 }
 #list-group-item:last-child {

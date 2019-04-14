@@ -23,8 +23,8 @@ module.exports = {
     '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
   ],
   testURL: 'http://localhost/',
-  watchPlugins: [
-    '/Users/rajat/Desktop/projects/anagram-frontend/node_modules/jest-watch-typeahead/filename.js',
-    '/Users/rajat/Desktop/projects/anagram-frontend/node_modules/jest-watch-typeahead/testname.js'
-  ]
+  // watchPlugins: [
+  //   '/Users/rajat/Desktop/projects/anagram-frontend/node_modules/jest-watch-typeahead/filename.js',
+  //   '/Users/rajat/Desktop/projects/anagram-frontend/node_modules/jest-watch-typeahead/testname.js'
+  // ]
 }
